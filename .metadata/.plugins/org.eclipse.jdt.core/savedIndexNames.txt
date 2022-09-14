@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+G:\Outros computadores\Computador da Família\Documents\alura-ide\formação-java-spring-framework\persistencia-com-jpa-hibernate\.metadata\.plugins\org.eclipse.jdt.core
+1151521893.index
