@@ -1,8 +1,12 @@
 package br.com.alura.loja.modelo;
 
-public enum Categoria {
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-	CELULARES,
-	INFORMATICA,
-	LIVROS;
+@Entity
+@Table(name = "categorias")
+public class Categoria {
+
+	private Long id;
+	private String nome;
 }
