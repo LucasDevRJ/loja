@@ -10,7 +10,8 @@ import br.com.alura.loja.util.JPAUtil;
 public class CadastroDeProduto {
 
 	public static void main(String[] args) {
-		Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), Categoria.CELULARES);
+		Categoria celulares = new Categoria("CELULARES");
+		Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), celulares);
 		
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDao produtoDao = new ProdutoDao(em);
