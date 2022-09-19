@@ -1,6 +1,7 @@
 package br.com.alura.loja.modelo;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +19,8 @@ public class Produto {
 	private String nome;
 	private String descricao;
 	private BigDecimal preco;
+	private LocalDate dataCadastro = LocalDate.now();
+	private Categoria categoria;
 	
 	public long getId() {
 		return id;
