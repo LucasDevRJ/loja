@@ -2,6 +2,7 @@ package br.com.alura.loja.dao;
 
 import javax.persistence.EntityManager;
 
+import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Produto;
 
 public class CategoriaDao {
@@ -13,7 +14,7 @@ public class CategoriaDao {
 		this.em = em;
 	}
 	
-	public void cadastrar(CategoriaDao categoria) {
+	public void cadastrar(Categoria categoria) {
 		this.em.persist(categoria);
 	}
 }
