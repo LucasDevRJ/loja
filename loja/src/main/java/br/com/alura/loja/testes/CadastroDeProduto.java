@@ -13,13 +13,17 @@ public class CadastroDeProduto {
 
 	public static void main(String[] args) {
 		Categoria celulares = new Categoria("CELULARES");
-		
+
 		EntityManager em = JPAUtil.getEntityManager();
-		
+
 		em.getTransaction().begin();
 //		em.persist(celulares);		
 		celulares.setNome("XPTO");
-		em.getTransaction().commit();
-		em.close();
+		em.flush();
+		em.clear();
+
+		celulares = em.merge(celulares);
+		celulares.setNome("Samsung");
+		em.flush();
 	}
 }
