@@ -1,3 +1,4 @@
 1663590594598	Encapsulate field 'dataCadastro'
 1663590597728	Encapsulate field 'categoria'
 1663593245875	Copy compilation unit
+1663717208261	Extract method 'cadastrarProduto'
