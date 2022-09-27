@@ -2,6 +2,7 @@ package br.com.alura.loja.modelo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -26,7 +27,7 @@ public class Pedido {
 	private Cliente cliente;
 	
 	@OneToMany(mappedBy = "pedido") //indica que o relacionamento já foi mapeado pelo atributo
-	private List<ItemPedido> itens;
+	private List<ItemPedido> itens = new ArrayList<>();
 	
 	public Pedido(Cliente cliente) {
 		this.cliente = cliente;
@@ -34,6 +35,11 @@ public class Pedido {
 
 	public Pedido() {
 		
+	}
+	
+	public void adicionarItem(ItemPedido item) {
+		item.setPedido(this); //Settando o próprio atributo
+		this.itens.add(item);
 	}
 
 	public long getId() {
