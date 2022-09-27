@@ -1,8 +1,0 @@
-package br.com.alura.loja.modelo;
-
-public class Categoria {
-
-	CELULARES,
-	INFORMATICA,
-	LIVROS;
-}

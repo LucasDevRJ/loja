@@ -8,8 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,8 +25,8 @@ public class Pedido {
 	@ManyToOne
 	private Cliente cliente;
 	
-	@ManyToMany
-	private List<ItemPedido> produtos;
+	@OneToMany(mappedBy = "pedido") //indica que o relacionamento já foi mapeado pelo atributo
+	private List<ItemPedido> itens;
 	
 	public Pedido(Cliente cliente) {
 		this.cliente = cliente;
