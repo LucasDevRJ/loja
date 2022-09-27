@@ -1,0 +1,40 @@
+package br.com.alura.loja.modelo;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
+
+//Entidade que representa itens do pedido, atributos e histórico de compras
+@Entity
+@Table(name = "itens_pedido")
+public class ItemPedido {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private BigDecimal precoUnitario;
+	private int quantidade;
+	
+	@ManyToOne
+	private Pedido pedido;
+	
+	@ManyToOne
+	private Produto produto;
+
+	public ItemPedido(int quantidade, Pedido pedido, Produto produto) {
+		this.quantidade = quantidade;
+		this.pedido = pedido;
+		this.produto = produto;
+	}
+	
+	public ItemPedido() {
+		
+	}
+}
