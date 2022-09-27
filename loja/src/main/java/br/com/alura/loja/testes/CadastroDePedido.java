@@ -30,7 +30,6 @@ public class CadastroDePedido {
 		
 		em.getTransaction().begin();
 		
-		Cliente cliente = new Cliente();
 		Pedido pedido = new Pedido(cliente);
 		pedido.adicionarItem(new ItemPedido(10, pedido, produto));
 		

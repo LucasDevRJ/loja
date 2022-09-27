@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,13 +22,15 @@ public class Pedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(name = "valor_total")
 	private BigDecimal valorTotal;
 	private LocalDate dataCadastro = LocalDate.now();
 	
 	@ManyToOne
 	private Cliente cliente;
 	
-	@OneToMany(mappedBy = "pedido") //indica que o relacionamento já foi mapeado pelo atributo
+	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL) //indica que o relacionamento já foi mapeado pelo atributo. Cascade permite que seja feita alterações nas tabelas relacionadas.
 	private List<ItemPedido> itens = new ArrayList<>();
 	
 	public Pedido(Cliente cliente) {
