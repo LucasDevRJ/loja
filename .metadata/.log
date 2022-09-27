@@ -5231,3 +5231,9 @@ java.io.FileNotFoundException: /org/eclipse/persistence/jaxb/eclipselink_oxm_2_5
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-27 10:23:29.746
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-27 10:26:22.751
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-27 10:26:22.772
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
