@@ -2,11 +2,13 @@ package br.com.alura.loja.modelo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,10 +25,10 @@ public class Pedido {
 	@ManyToOne
 	private Cliente cliente;
 	
-	public Pedido(BigDecimal valorTotal, LocalDate dataCadastro, Cliente cliente) {
-		super();
-		this.valorTotal = valorTotal;
-		this.dataCadastro = dataCadastro;
+	@ManyToMany
+	private List<ItemPedido> produtos;
+	
+	public Pedido(Cliente cliente) {
 		this.cliente = cliente;
 	}
 
