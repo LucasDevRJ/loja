@@ -1,0 +1,24 @@
+package br.com.alura.loja.dao;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.com.alura.loja.modelo.Categoria;
+import br.com.alura.loja.modelo.Cliente;
+import br.com.alura.loja.modelo.Produto;
+
+public class ClienteDao {
+
+	private EntityManager em;
+
+	public ClienteDao(EntityManager em) {
+		super();
+		this.em = em;
+	}
+	
+	public void cadastrar(Cliente cliente) {
+		this.em.persist(cliente);
+	}
+}

@@ -23,12 +23,17 @@ public class CadastroDePedido {
 		ProdutoDao produtoDao = new ProdutoDao(em);
 		Produto produto = produtoDao.buscarPorId(1l);
 		
+		em.getTransaction().begin();
+		
 		Cliente cliente = new Cliente("Rodrigo", "123456");
 		Pedido pedido = new Pedido(cliente);
 		pedido.adicionarItem(new ItemPedido(10, pedido, produto));
 		
 		PedidoDao pedidoDao = new PedidoDao(em);
+		
 		pedidoDao.cadastrar(pedido);
+		
+		em.getTransaction().commit();
 	}
 
 	private static void cadastrarProduto() {
