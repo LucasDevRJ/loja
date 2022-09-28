@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="javax.net.ssl.ManagerFactoryParameters"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Produto"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.util.JPAUtil"/>
@@ -16,13 +15,18 @@
     <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ManyToAny"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Categoria"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.CategoriaDao"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.modelo.ItemPedido"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Produto"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.modelo.ItemPedido"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.ClienteDao"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
 </qualifiedTypeNameHistroy>
