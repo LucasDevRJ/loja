@@ -1,0 +1,9 @@
+package br.com.alura.loja.dto;
+
+public class VendasPorDia {
+    private String nomeDoProduto;
+    private BigDecimal valorVendido;
+    private LocalDate dataDasVendas;
+
+    //getters e setter de todos os atributos
+}

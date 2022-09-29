@@ -1,0 +1,42 @@
+package br.com.alura.loja.dto;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public class VendasPorDia {
+	
+    private String nomeDoProduto;
+    private BigDecimal valorVendido;
+    private LocalDate dataDasVendas;
+    
+    //getters e setter de todos os atributos
+    
+	public VendasPorDia(String nomeDoProduto, BigDecimal valorVendido, LocalDate dataDasVendas) {
+		this.nomeDoProduto = nomeDoProduto;
+		this.valorVendido = valorVendido;
+		this.dataDasVendas = dataDasVendas;
+	}
+	public String getNomeDoProduto() {
+		return nomeDoProduto;
+	}
+	public void setNomeDoProduto(String nomeDoProduto) {
+		this.nomeDoProduto = nomeDoProduto;
+	}
+	public BigDecimal getValorVendido() {
+		return valorVendido;
+	}
+	public void setValorVendido(BigDecimal valorVendido) {
+		this.valorVendido = valorVendido;
+	}
+	public LocalDate getDataDasVendas() {
+		return dataDasVendas;
+	}
+	public void setDataDasVendas(LocalDate dataDasVendas) {
+		this.dataDasVendas = dataDasVendas;
+	}
+	@Override
+	public String toString() {
+		return "VendasPorDia [nomeDoProduto=" + nomeDoProduto + ", valorVendido=" + valorVendido + ", dataDasVendas="
+				+ dataDasVendas + "]";
+	}
+}

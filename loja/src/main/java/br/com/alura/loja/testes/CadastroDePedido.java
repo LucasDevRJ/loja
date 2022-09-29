@@ -9,12 +9,14 @@ import br.com.alura.loja.dao.CategoriaDao;
 import br.com.alura.loja.dao.ClienteDao;
 import br.com.alura.loja.dao.PedidoDao;
 import br.com.alura.loja.dao.ProdutoDao;
+import br.com.alura.loja.dto.VendasPorDia;
 import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Cliente;
 import br.com.alura.loja.modelo.ItemPedido;
 import br.com.alura.loja.modelo.Pedido;
 import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
+import br.com.alura.loja.vo.RelatorioDeVendasVo;
 
 public class CadastroDePedido {
 
@@ -42,13 +44,13 @@ public class CadastroDePedido {
 		BigDecimal totalVendido = pedidoDao.valorTotalVendido();
 		System.out.println("Valor total: R$ " + totalVendido);
 		
-		List<Object[]> relatorio = pedidoDao.relatorioDeVendas();
+		List<RelatorioDeVendasVo> relatorio = pedidoDao.relatorioDeVendas();
 		
-		for (Object[] objects : relatorio) {
-			System.out.println(objects[0]);
-			System.out.println(objects[1]);
-			System.out.println(objects[2]);
-		}
+		List<VendasPorDia> relatorioVendasPorDia = pedidoDao.relatorioDeVendasPorDia();
+		
+		
+		relatorio.forEach(rv -> System.out.println(rv));
+		relatorioVendasPorDia.forEach(rvd -> System.out.println(rvd));
 	}
 
 	private static void popularBancoDeDados() {
