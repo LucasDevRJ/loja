@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.CategoriaDao"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
@@ -29,4 +28,5 @@
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.ClienteDao"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
 </qualifiedTypeNameHistroy>
