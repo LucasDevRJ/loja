@@ -24,6 +24,14 @@ public class PerfomanceConsultas {
 		popularBancoDeDados();
 		
 		EntityManager em = JPAUtil.getEntityManager();
+		PedidoDao pedidoDao = new PedidoDao(em);
+		pedidoDao.buscarPedidoComCliente(1l);
+		
+		Pedido pedido = pedidoDao.buscarPedidoComCliente(1l);
+	
+		em.close();
+		
+		System.out.println(pedido.getCliente().getNome());
 	}
 
 	private static void popularBancoDeDados() {
@@ -32,22 +40,31 @@ public class PerfomanceConsultas {
 		
         Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), celulares );
         Produto console = new Produto("PlayStation", "PlayStation 3", new BigDecimal("1200"), consoles );
+        
         Cliente cliente = new Cliente("Rodrigo", "123456");
+        
+        Pedido pedido = new Pedido(cliente);
+        Pedido pedido2 = new Pedido(cliente);
        
         EntityManager em = JPAUtil.getEntityManager();
         
         ProdutoDao produtoDao = new ProdutoDao(em);
         CategoriaDao categoriaDao = new CategoriaDao(em);
         ClienteDao clienteDao = new ClienteDao(em);
+        PedidoDao pedidoDao = new PedidoDao(em);
 
         em.getTransaction().begin();
 
         categoriaDao.cadastrar(celulares);
         categoriaDao.cadastrar(consoles);
         
+        pedidoDao.cadastrar(pedido);
+        pedidoDao.cadastrar(pedido2);
+        
         produtoDao.cadastrar(celular);
         produtoDao.cadastrar(console);
-        
+
+        clienteDao.cadastrar(cliente);
         clienteDao.cadastrar(cliente);
        
         em.getTransaction().commit();

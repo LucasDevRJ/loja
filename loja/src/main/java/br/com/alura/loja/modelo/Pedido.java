@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class Pedido {
 	private BigDecimal valorTotal = BigDecimal.ZERO;
 	private LocalDate dataCadastro = LocalDate.now();
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY) //controla o carregamento
 	private Cliente cliente;
 	
 	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL) //indica que o relacionamento já foi mapeado pelo atributo. Cascade permite que seja feita alterações nas tabelas relacionadas.
@@ -78,4 +79,12 @@ public class Pedido {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}	
+	
+	public List<ItemPedido> getItens() {
+		return itens;
+	}
+	
+	public void setItens(List<ItemPedido> itens) {
+		this.itens = itens;
+	}
 }

@@ -36,4 +36,10 @@ public class PedidoDao {
 		String jpql = "select new br.com.alura.loja.dto.VendasPorDia(produto.nome, sum(pedido.valorTotal), pedido.dataCadastro) from Pedido pedido join pedido.itens itens join itens.produto produto group by produto.nome, pedido.dataCadastro";
 		return em.createQuery(jpql, VendasPorDia.class).getResultList();
 	}
+	
+	public Pedido buscarPedidoComCliente(Long id) {
+		return em.createQuery("SELECT p FROM Pedido p JOIN FETCH p.cliente WHERE p.id =:id", Pedido.class)
+				.setParameter("id", id)
+				.getSingleResult();
+	}
 }
