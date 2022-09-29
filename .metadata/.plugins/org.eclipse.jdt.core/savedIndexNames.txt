@@ -15,7 +15,6 @@ INDEX VERSION 1.131+G:\Outros computadores\Computador da Família\Documents\alura
 67843684.index
 3086335400.index
 3603082201.index
-2887631762.index
 2366718115.index
 838646145.index
 3105657872.index
