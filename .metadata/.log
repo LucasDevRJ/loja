@@ -6118,3 +6118,21 @@ java.lang.IllegalStateException: Disconnected before saving. Please post stacktr
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 11:41:03.149
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:45:40.366
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:45:40.390
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:47:58.230
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:47:58.277
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:48:34.289
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-29 16:48:34.315
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
