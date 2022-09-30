@@ -1,6 +1,5 @@
 package br.com.alura.loja.testes;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.EntityManager;
@@ -9,10 +8,10 @@ import br.com.alura.loja.dao.CategoriaDao;
 import br.com.alura.loja.dao.ClienteDao;
 import br.com.alura.loja.dao.PedidoDao;
 import br.com.alura.loja.dao.ProdutoDao;
-import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Cliente;
+import br.com.alura.loja.modelo.Informatica;
+import br.com.alura.loja.modelo.Livro;
 import br.com.alura.loja.modelo.Pedido;
-import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
 
 public class TesteCriteria {
@@ -25,11 +24,8 @@ public class TesteCriteria {
 	}
 
 	private static void popularBancoDeDados() {
-		Categoria celulares = new Categoria("CELULARES");
-		Categoria consoles = new Categoria("CONSOLES");
-		
-        Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), celulares );
-        Produto console = new Produto("PlayStation", "PlayStation 3", new BigDecimal("1200"), consoles );
+		Livro livro = new Livro("Rick Sanches", 180);
+		Informatica informatica = new Informatica("Logtech", 343);
         
         Cliente cliente = new Cliente("Rodrigo", "123456");
         
@@ -44,15 +40,12 @@ public class TesteCriteria {
         PedidoDao pedidoDao = new PedidoDao(em);
 
         em.getTransaction().begin();
-
-        categoriaDao.cadastrar(celulares);
-        categoriaDao.cadastrar(consoles);
         
         pedidoDao.cadastrar(pedido);
         pedidoDao.cadastrar(pedido2);
         
-        produtoDao.cadastrar(celular);
-        produtoDao.cadastrar(console);
+        produtoDao.cadastrar(livro);
+        produtoDao.cadastrar(informatica);
 
         clienteDao.cadastrar(cliente);
         clienteDao.cadastrar(cliente);

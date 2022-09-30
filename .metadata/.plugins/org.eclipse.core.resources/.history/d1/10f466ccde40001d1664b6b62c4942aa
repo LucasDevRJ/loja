@@ -1,0 +1,17 @@
+package br.com.alura.loja.modelo;
+
+public class CategoriaId {
+
+	private String nome;
+	private String tipo;
+	
+	public CategoriaId() {
+		
+	}
+
+	public CategoriaId(String nome, String tipo) {
+		super();
+		this.nome = nome;
+		this.tipo = tipo;
+	}
+}

@@ -1,6 +1,9 @@
 package br.com.alura.loja.modelo;
 
-public class Informatica {
+import javax.persistence.Entity;
+
+@Entity
+public class Informatica extends Produto{
 
 	private String marca;
 	private Integer modelo;
