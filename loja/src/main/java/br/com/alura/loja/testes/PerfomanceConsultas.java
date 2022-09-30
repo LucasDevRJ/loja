@@ -1,7 +1,6 @@
 package br.com.alura.loja.testes;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 
@@ -9,14 +8,11 @@ import br.com.alura.loja.dao.CategoriaDao;
 import br.com.alura.loja.dao.ClienteDao;
 import br.com.alura.loja.dao.PedidoDao;
 import br.com.alura.loja.dao.ProdutoDao;
-import br.com.alura.loja.dto.VendasPorDia;
 import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Cliente;
-import br.com.alura.loja.modelo.ItemPedido;
 import br.com.alura.loja.modelo.Pedido;
 import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
-import br.com.alura.loja.vo.RelatorioDeVendasVo;
 
 public class PerfomanceConsultas {
 
@@ -66,7 +62,7 @@ public class PerfomanceConsultas {
 
         clienteDao.cadastrar(cliente);
         clienteDao.cadastrar(cliente);
-       
+      
         em.getTransaction().commit();
         em.close();
 	}

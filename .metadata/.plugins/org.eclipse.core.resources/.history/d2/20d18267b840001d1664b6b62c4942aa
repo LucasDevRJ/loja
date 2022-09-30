@@ -1,0 +1,27 @@
+package br.com.alura.loja.dao;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import br.com.alura.loja.modelo.Cliente;
+
+public class ClienteDao {
+
+	private EntityManager em;
+
+	public ClienteDao(EntityManager em) {
+		super();
+		this.em = em;
+	}
+	
+	public void cadastrar(Cliente cliente) {
+		this.em.persist(cliente);
+	}
+	
+	public Cliente buscarPorId(Long id) {
+		return em.find(Cliente.class, id);
+	}
+}

@@ -1,0 +1,45 @@
+package br.com.alura.loja.dao;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import br.com.alura.loja.modelo.Cliente;
+
+public class ClienteDao {
+
+	private EntityManager em;
+
+	public ClienteDao(EntityManager em) {
+		super();
+		this.em = em;
+	}
+	
+	public void cadastrar(Cliente cliente) {
+		this.em.persist(cliente);
+	}
+	
+	public Cliente buscarPorId(Long id) {
+		return em.find(Cliente.class, id);
+	}
+	
+	public List<Cliente> buscarClientes(String nome, LocalDate dataNascimento) {
+	    String jpql = "SELECT c FROM Cliente c WHERE ";
+	    if (nome != null && !nome.trim().isEmpty()) {
+	        jpql += "AND c.nome = :nome ";
+	    }
+	    if (dataNascimento != null) {
+	        jpql += " AND c.dataNascimento = :dataNascimento ";
+	    }
+	    TypedQuery<Cliente> query = em.createQuery(jpql, Cliente.class);
+	    if (nome != null && !nome.trim().isEmpty()) {
+	        query.setParameter("nome", nome);
+	    }
+	    if (dataNascimento != null) {
+	        query.setParameter("dataNascimento", dataNascimento);
+	    }
+	    return query.getResultList();
+	}
+}
