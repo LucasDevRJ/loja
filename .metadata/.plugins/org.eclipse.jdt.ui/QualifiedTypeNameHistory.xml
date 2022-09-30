@@ -11,12 +11,10 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.util.JPAUtil"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ManyToAny"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Categoria"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.CategoriaDao"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item"/>
@@ -25,8 +23,15 @@
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Produto"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.ItemPedido"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.ClienteDao"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.vo.RelatorioDeVendasVo"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dto.VendasPorDia"/>
+    <fullyQualifiedTypeName name="javax.persistence.NamedQueries"/>
+    <fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
 </qualifiedTypeNameHistroy>
