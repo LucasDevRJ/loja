@@ -10,8 +10,6 @@
 				<property name="javax.persistence.jdbc.url" value="h2:mem:loja"/>
 				<property name="javax.persistence.jdbc.username" value="sa"/>
 				<property name="javax.persistence.jdbc.password" value=""/>
-				
-				<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 			</properties>
 		</persistence-unit>
 </persistence>
