@@ -2,8 +2,10 @@ INDEX VERSION 1.134+C:\workspace\portfolio\back-end\loja\.metadata\.plugins\org.
 3968491296.index
 1865797976.index
 925194211.index
+3105657872.index
 3413725848.index
 4207321465.index
+81377837.index
 3704865469.index
 3022215016.index
 64899299.index
