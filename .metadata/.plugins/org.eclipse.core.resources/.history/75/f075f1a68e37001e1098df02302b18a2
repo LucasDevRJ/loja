@@ -1,6 +1,8 @@
 package br.com.alura.loja.testes;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+
 import javax.persistence.EntityManager;
 
 import br.com.alura.loja.dao.ProdutoDao;
@@ -12,7 +14,7 @@ public class CadastroDeProduto {
 
 	public static void main(String[] args) {
 		Produto celular = new Produto("Xiaomi Redmi", 
-		"Muito legal", new BigDecimal("800"), Categoria.CELULARES);
+				"Muito legal", new BigDecimal("800") Categoria.CELULARES);
 
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDao dao = new ProdutoDao(em);

@@ -23,10 +23,11 @@ public class Produto {
 	private Categoria categoria;
 	
 	public Produto(String nome, String descricao, 
-	BigDecimal preco, Categoria categoria) {
+	BigDecimal preco, LocalDate dataCadastro, Categoria categoria) {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
+		this.dataCadastro = dataCadastro;
 		this.categoria = categoria;
 	}
 
