@@ -1,0 +1,7 @@
+package br.com.alura.loja.modelo;
+
+public class Categoria {
+	
+	private Long id;
+	private String nome;
+}
