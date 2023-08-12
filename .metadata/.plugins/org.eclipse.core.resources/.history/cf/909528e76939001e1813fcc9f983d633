@@ -1,7 +1,5 @@
 package br.com.alura.loja.testes;
 
-import java.math.BigDecimal;
-
 import javax.persistence.EntityManager;
 
 import br.com.alura.loja.dao.CategoriaDao;
