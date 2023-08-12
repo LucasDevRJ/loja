@@ -9,11 +9,6 @@ public class CadastroDeProduto {
 
 	public static void main(String[] args) {
 		cadastrarProduto();
-		Long id = 1l;
-		EntityManager em = JPAUtil.getEntityManager();
-		em.getTransaction().begin();
-		
-		
 	}
 
 	private static void cadastrarProduto() {
