@@ -59,7 +59,7 @@ public class ProdutoDao {
 	}
 	
 	public List<Produto> buscarProdutosComPrecoAte(BigDecimal preco) {
-		String jpql = "SELECT p FROM Produto p WHERE p.preco <= :preco";
+		String jpql = "SELECT p FROM Produto p WHERE p.preco = :preco";
 		return this.em.createQuery(jpql, Produto.class)
 				.setParameter("preco", preco)
 				.getResultList();

@@ -45,7 +45,7 @@ public class CadastroDeProduto {
 		
 		System.out.println();
 		System.out.println("Buscar produtos com o preço de até");
-		List<Produto> produtos4 = produtoDao.buscarProdutosComPrecoAte(new BigDecimal("1000"));
+		List<Produto> produtos4 = produtoDao.buscarPorCategoria("CELULARES");
 		produtos4.forEach(p -> System.out.println(p));
 	}
 
