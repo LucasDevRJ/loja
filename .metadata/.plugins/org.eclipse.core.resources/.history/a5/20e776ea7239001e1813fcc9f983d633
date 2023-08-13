@@ -58,14 +58,10 @@ public class CadastroDeProduto {
         em.getTransaction().begin();
 
         categoriaDao.cadastrar(celulares);
-        categoriaDao.cadastrar(consoles);
-        
         produtoDao.cadastrar(celular);
         produtoDao.cadastrar(celular2);
         produtoDao.cadastrar(celular3);
         produtoDao.cadastrar(celular4);
-        produtoDao.cadastrar(console);
-        produtoDao.cadastrar(console2);
 
         em.getTransaction().commit();
         em.close();
