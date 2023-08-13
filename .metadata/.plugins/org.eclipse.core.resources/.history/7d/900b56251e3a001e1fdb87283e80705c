@@ -40,8 +40,7 @@ public class CadastroDeProduto {
 		
 		System.out.println();
 		System.out.println("Buscar produto pelo nome");
-		BigDecimal precoProduto = produtoDao.buscarPrecoProduto("Motorola");
-		System.out.println(precoProduto);
+		Produto precoProduto = produtoDao.buscarPrecoProduto("930");
 	}
 
 	private static void cadastrarProduto() {
