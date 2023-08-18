@@ -13,10 +13,10 @@
     <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Categoria"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Produto"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.CategoriaDao"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
 </qualifiedTypeNameHistroy>
