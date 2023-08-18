@@ -2,7 +2,6 @@ package br.com.alura.loja.modelo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,9 +20,6 @@ public class Pedido {
 	
 	@ManyToOne
 	private Cliente cliente;
-	
-	private List<ItemPedido> produtos;
-	
 	private BigDecimal valorTotal;
 	private LocalDate data = LocalDate.now();
 	
