@@ -1,0 +1,63 @@
+package br.com.alura.loja.testes;
+
+import java.math.BigDecimal;
+
+import javax.persistence.EntityManager;
+
+import br.com.alura.loja.dao.CategoriaDao;
+import br.com.alura.loja.dao.ProdutoDao;
+import br.com.alura.loja.modelo.Categoria;
+import br.com.alura.loja.modelo.Cliente;
+import br.com.alura.loja.modelo.ItemPedido;
+import br.com.alura.loja.modelo.Pedido;
+import br.com.alura.loja.modelo.Produto;
+import br.com.alura.loja.util.JPAUtil;
+
+public class CadastroDePedido {
+
+	public static void main(String[] args) {
+		cadastrarProduto();
+		
+		EntityManager em = JPAUtil.getEntityManager();
+		ProdutoDao produtoDao = new ProdutoDao(em);
+		Produto produto = produtoDao.buscarPorId(1l);
+		
+		Cliente cliente = new Cliente("Rodrigo", "111.222.333-11");
+		Pedido pedido = new Pedido(cliente);
+		pedido.adicionarPedido(new ItemPedido(10, pedido, produto));
+		
+		
+	}
+	
+	private static void cadastrarProduto() {
+		Categoria celulares = new Categoria("CELULARES");
+		Categoria consoles = new Categoria("CONSOLES");
+		
+        Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), celulares );
+        Produto celular2 = new Produto("Samsung Galaxy", "Muito legal 2", new BigDecimal("900"), celulares );
+        Produto celular3 = new Produto("Motorola", "Muito legal 3", new BigDecimal("930"), celulares );
+        Produto celular4 = new Produto("Samsung Galaxy", "Samsung Galaxy J8", new BigDecimal("1200"), celulares );
+        
+        Produto console = new Produto("Xbox", "Xbox One", new BigDecimal("1200"), consoles);
+        Produto console2 = new Produto("PlayStation", "PlayStation 4", new BigDecimal("1600"), consoles);
+        
+        EntityManager em = JPAUtil.getEntityManager();
+        ProdutoDao produtoDao = new ProdutoDao(em);
+        CategoriaDao categoriaDao = new CategoriaDao(em);
+
+        em.getTransaction().begin();
+
+        categoriaDao.cadastrar(celulares);
+        categoriaDao.cadastrar(consoles);
+        
+        produtoDao.cadastrar(celular);
+        produtoDao.cadastrar(celular2);
+        produtoDao.cadastrar(celular3);
+        produtoDao.cadastrar(celular4);
+        produtoDao.cadastrar(console);
+        produtoDao.cadastrar(console2);
+
+        em.getTransaction().commit();
+        em.close();
+	}
+}

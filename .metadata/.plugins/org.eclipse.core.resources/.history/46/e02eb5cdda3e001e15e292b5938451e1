@@ -23,12 +23,17 @@ public class ItemPedido {
 	private Pedido pedido;
 	
 	@ManyToOne
-	private Produto produto;
+	private Cliente cliente;
 
+	public ItemPedido(int quantidade, Pedido pedido, Cliente cliente) {
+		this.quantidade = quantidade;
+		this.pedido = pedido;
+		this.cliente = cliente;
+	}
+	
 	public ItemPedido(int quantidade, Pedido pedido, Produto produto) {
 		this.quantidade = quantidade;
 		this.pedido = pedido;
-		this.precoUnitario = produto.getPreco();
 		this.produto = produto;
 	}
 	
@@ -67,12 +72,12 @@ public class ItemPedido {
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
-	
-	public Produto getProduto() {
-		return produto;
+
+	public Cliente getCliente() {
+		return cliente;
 	}
-	
-	public void setProduto(Produto produto) {
-		this.produto = produto;
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 }
