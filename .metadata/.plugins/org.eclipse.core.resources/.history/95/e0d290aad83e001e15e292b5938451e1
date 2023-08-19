@@ -25,11 +25,10 @@ public class ItemPedido {
 	@ManyToOne
 	private Cliente cliente;
 
-	public ItemPedido(int quantidade, Pedido pedido, Cliente cliente, Produto produto) {
+	public ItemPedido(int quantidade, Pedido pedido, Cliente cliente) {
 		this.quantidade = quantidade;
 		this.pedido = pedido;
 		this.cliente = cliente;
-		this.precoUnitario = p
 	}
 	
 	public ItemPedido() {
