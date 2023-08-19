@@ -32,8 +32,6 @@ public class CadastroDePedido {
 		PedidoDao pedidoDao = new PedidoDao(em);
 		pedidoDao.cadastrar(pedido);
 		
-		em.getTransaction().commit();
-		
 	}
 	
 	private static void cadastrarProduto() {

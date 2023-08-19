@@ -4,11 +4,11 @@ import javax.persistence.EntityManager;
 
 import br.com.alura.loja.modelo.Pedido;
 
-public class PedidoDao {
+public class ClienteDao {
 
 	private EntityManager em;
 	
-	public PedidoDao(EntityManager em) {
+	public ClienteDao(EntityManager em) {
 		this.em = em;
 	}
 	
