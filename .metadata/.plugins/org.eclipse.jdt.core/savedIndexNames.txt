@@ -8,9 +8,9 @@ INDEX VERSION 1.134+C:\workspace\portfolio\back-end\loja\.metadata\.plugins\org.
 81377837.index
 3704865469.index
 3022215016.index
-64899299.index
-2887631762.index
 3086335400.index
+2887631762.index
+64899299.index
 3922905893.index
 1865048315.index
 2366718115.index

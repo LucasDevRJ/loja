@@ -13,8 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import net.bytebuddy.asm.Advice.This;
-
 @Entity
 @Table(name = "pedidos")
 public class Pedido {
@@ -38,11 +36,6 @@ public class Pedido {
 	
 	public Pedido() {
 		
-	}
-	
-	public void adicionarPedido(ItemPedido item) {
-		item.setPedido(this);
-		this.itens.add(item);
 	}
 
 	public Long getId() {
