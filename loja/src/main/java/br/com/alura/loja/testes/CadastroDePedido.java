@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import javax.persistence.EntityManager;
 
 import br.com.alura.loja.dao.CategoriaDao;
+import br.com.alura.loja.dao.ClienteDao;
 import br.com.alura.loja.dao.PedidoDao;
 import br.com.alura.loja.dao.ProdutoDao;
 import br.com.alura.loja.modelo.Categoria;
@@ -17,16 +18,16 @@ import br.com.alura.loja.util.JPAUtil;
 public class CadastroDePedido {
 
 	public static void main(String[] args) {
-		cadastrarProduto();
+		popularBancoDeDados();
 		
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDao produtoDao = new ProdutoDao(em);
+		ClienteDao clienteDao = new ClienteDao(em);
 		Produto produto = produtoDao.buscarPorId(1l);
-		
+		Cliente cliente = clienteDao.buscarPorId(1l);
 		em.getTransaction().begin();
 		
-		Cliente cliente = new Cliente("Rodrigo", "111.222.333-11");
-		Pedido pedido = new Pedido(cliente);
+		Pedido pedido = new Pedido(cliente );
 		pedido.adicionarPedido(new ItemPedido(10, pedido, produto));
 		
 		PedidoDao pedidoDao = new PedidoDao(em);
@@ -36,7 +37,7 @@ public class CadastroDePedido {
 		
 	}
 	
-	private static void cadastrarProduto() {
+	private static void popularBancoDeDados() {
 		Categoria celulares = new Categoria("CELULARES");
 		Categoria consoles = new Categoria("CONSOLES");
 		
@@ -48,9 +49,12 @@ public class CadastroDePedido {
         Produto console = new Produto("Xbox", "Xbox One", new BigDecimal("1200"), consoles);
         Produto console2 = new Produto("PlayStation", "PlayStation 4", new BigDecimal("1600"), consoles);
         
+        Cliente cliente = new Cliente("Rodrigo", "111.222.333-11");
+        
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
         CategoriaDao categoriaDao = new CategoriaDao(em);
+        ClienteDao clienteDao = new ClienteDao(em);
 
         em.getTransaction().begin();
 
@@ -63,6 +67,7 @@ public class CadastroDePedido {
         produtoDao.cadastrar(celular4);
         produtoDao.cadastrar(console);
         produtoDao.cadastrar(console2);
+        clienteDao.cadastrar(cliente);
 
         em.getTransaction().commit();
         em.close();
