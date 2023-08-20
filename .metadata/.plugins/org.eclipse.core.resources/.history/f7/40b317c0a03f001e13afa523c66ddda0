@@ -20,6 +20,6 @@ public class PedidoDao {
 	
 	public BigDecimal valorTotalVendido() {
 		String jpql = "SELECT SUM(p.valorTotal) FROM Pedido p";
-		return this.em.createQuery(jpql, BigDecimal.class).getSingleResult();
+		return this.em.createQuery(jpql, Pedido.class).getSingleResult();
 	}
 }
