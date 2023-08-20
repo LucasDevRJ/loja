@@ -34,7 +34,7 @@ public class Pedido {
 	private List<ItemPedido> itens = new ArrayList<>();
 	
 	@Column(name = "valor_total")
-	private BigDecimal valorTotal = BigDecimal.ZERO;
+	private BigDecimal valorTotal = new BigDecimal.ZERO;
 	private LocalDate data = LocalDate.now();
 	
 	public Pedido(Cliente cliente) {
@@ -45,10 +45,9 @@ public class Pedido {
 		
 	}
 	
-	public void adicionarItem(ItemPedido item) {
+	public void adicionarPedido(ItemPedido item) {
 		item.setPedido(this);
 		this.itens.add(item);
-		this.valorTotal = this.valorTotal.add(item.getValor());
 	}
 
 	public Long getId() {

@@ -28,7 +28,7 @@ public class CadastroDePedido {
 		em.getTransaction().begin();
 		
 		Pedido pedido = new Pedido(cliente );
-		pedido.adicionarItem(new ItemPedido(10, pedido, produto));
+		pedido.adicionarPedido(new ItemPedido(10, pedido, produto));
 		
 		PedidoDao pedidoDao = new PedidoDao(em);
 		pedidoDao.cadastrar(pedido);
