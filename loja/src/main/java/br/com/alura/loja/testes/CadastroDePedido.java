@@ -28,7 +28,7 @@ public class CadastroDePedido {
 		Cliente cliente = clienteDao.buscarPorId(1l);
 		em.getTransaction().begin();
 		
-		Pedido pedido = new Pedido(cliente );
+		Pedido pedido = new Pedido(cliente);
 		pedido.adicionarItem(new ItemPedido(10, pedido, produto));
 		
 		PedidoDao pedidoDao = new PedidoDao(em);
