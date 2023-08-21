@@ -15,6 +15,7 @@ import br.com.alura.loja.modelo.ItemPedido;
 import br.com.alura.loja.modelo.Pedido;
 import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
+import br.com.alura.loja.vo.RelatorioDeVendasVo;
 
 public class CadastroDePedido {
 
@@ -26,25 +27,27 @@ public class CadastroDePedido {
 		ClienteDao clienteDao = new ClienteDao(em);
 		Produto produto = produtoDao.buscarPorId(1l);
 		Cliente cliente = clienteDao.buscarPorId(1l);
+		Produto produto2 = produtoDao.buscarPorId(2l);
+		Cliente cliente2 = clienteDao.buscarPorId(2l);
 		em.getTransaction().begin();
 		
 		Pedido pedido = new Pedido(cliente);
 		pedido.adicionarItem(new ItemPedido(10, pedido, produto));
 		
+		Pedido pedido2 = new Pedido(cliente2);
+		pedido2.adicionarItem(new ItemPedido(15, pedido2, produto2));
+		
 		PedidoDao pedidoDao = new PedidoDao(em);
 		pedidoDao.cadastrar(pedido);
+		pedidoDao.cadastrar(pedido2);
 		
 		em.getTransaction().commit();
 		
 		BigDecimal totalVendido = pedidoDao.valorTotalVendido();
 		System.out.println("VALOR TOTAL VENDIDO: " + totalVendido);
 		
-		List<Object[]> relatorio = pedidoDao.relatorioDeVendas();
-		for (Object[] obj : relatorio) {
-			System.out.println(obj[0]);
-			System.out.println(obj[1]);
-			System.out.println(obj[2]);
-		}
+		List<RelatorioDeVendasVo> relatorio = pedidoDao.relatorioDeVendas();
+		relatorio.forEach(System.out::println);
 	}
 	
 	private static void popularBancoDeDados() {
