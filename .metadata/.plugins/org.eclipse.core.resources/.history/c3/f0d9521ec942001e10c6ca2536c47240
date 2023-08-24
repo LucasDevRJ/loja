@@ -55,7 +55,7 @@ public class CadastroDePedido {
 		System.out.println(pedido3.getCliente().getNome());
 		
 		Pedido pedido4 = pedidoDao.buscarPedidoComCliente(1l);
-		System.out.println(pedido4.getCliente().getNome());
+		System.out.println(pedido4);
 	}
 	
 	private static void popularBancoDeDados() {
