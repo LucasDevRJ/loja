@@ -13,7 +13,6 @@
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Categoria"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.CategoriaDao"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
@@ -24,9 +23,12 @@
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Produto"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.ProdutoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Pedido"/>
-    <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.modelo.Cliente"/>
     <fullyQualifiedTypeName name="br.com.alura.loja.dao.ClienteDao"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.CollectionId"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.dao.PedidoDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="br.com.alura.loja.vo.RelatorioDeVendasVo"/>
 </qualifiedTypeNameHistroy>
