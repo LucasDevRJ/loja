@@ -51,7 +51,6 @@ public class CadastroDePedido {
 		
 		Pedido pedido3 = em.find(Pedido.class, 1l);
 		System.out.println(pedido3.getData());
-		System.out.println(pedido3.getItens().size());
 	}
 	
 	private static void popularBancoDeDados() {
