@@ -52,6 +52,11 @@ public class CadastroDeProduto {
 		System.out.println("Buscar produtos com parâmetros");
 		List<Produto> produtos5 = produtoDao.buscarProdutoPorParametros(null,  new BigDecimal("1200"), null);
 		produtos5.forEach(p -> System.out.println(p));
+		
+		System.out.println();
+		System.out.println("Buscar produtos com parâmetros criteria api");
+		List<Produto> produtos6 = produtoDao.buscarProdutoPorParametros("PlayStation",  null, null);
+		produtos6.forEach(p -> System.out.println(p));
 	}
 
 	private static void cadastrarProduto() {
