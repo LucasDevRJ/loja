@@ -3,8 +3,10 @@ package br.com.alura.loja.modelo;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "livros")
 public class Livro extends Produto {
 
 	private String autor;
