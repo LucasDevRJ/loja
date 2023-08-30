@@ -2,6 +2,9 @@ package br.com.alura.loja.modelo;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Informatica extends Produto {
 
 	private String marca;
