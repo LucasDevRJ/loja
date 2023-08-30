@@ -13,9 +13,10 @@ public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private DadosPessoais dadosPessoais;
 	
 	public Cliente(String nome, String cpf) {
-		
+		this.dadosPessoais = new DadosPessoais(nome, cpf);
 	}
 	
 	public Cliente() {
@@ -28,5 +29,9 @@ public class Cliente {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	public DadosPessoais getDadosPessoais() {
+		return dadosPessoais;
 	}
 }
