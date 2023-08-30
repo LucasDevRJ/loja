@@ -47,6 +47,11 @@ public class CadastroDeProduto {
 		System.out.println("Buscar produtos com o preço de até");
 		List<Produto> produtos4 = produtoDao.buscarProdutosComPrecoAte(new BigDecimal("1000"));
 		produtos4.forEach(p -> System.out.println(p));
+		
+		System.out.println();
+		System.out.println("Buscar produtos com parâmetros");
+		List<Produto> produtos5 = produtoDao.buscarProdutoPorParametros(null,  new BigDecimal("1200"), null);
+		produtos5.forEach(p -> System.out.println(p));
 	}
 
 	private static void cadastrarProduto() {
